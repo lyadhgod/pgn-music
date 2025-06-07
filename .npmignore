@@ -1,0 +1,26 @@
+# Ignore src
+/src
+
+# Ignore TypeScript cache
+*.tsbuildinfo
+
+# Ignore node modules
+/node_modules
+
+# Ignore test files and coverage
+/tests
+/coverage
+
+# Ignore config files not needed in npm package
+jest.config.js
+tsconfig.json
+rollup.config.js
+
+# Ignore misc
+.DS_Store
+.env*
+
+# Ignore github
+.github
+.gitignore
+

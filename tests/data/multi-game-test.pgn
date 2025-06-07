@@ -1,0 +1,19 @@
+[Event "Game1"]
+[Site "?"]
+[Date "2020.01.01"]
+[Round "1"]
+[White "A"]
+[Black "B"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 Nc6 *
+
+[Event "Game2"]
+[Site "?"]
+[Date "2020.01.02"]
+[Round "2"]
+[White "C"]
+[Black "D"]
+[Result "*"]
+
+1. d4 d5 2. c4 c6 *
