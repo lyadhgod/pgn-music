@@ -1,13 +1,13 @@
 {
   "name": "pgn-music",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Parse PGN and convert them to music",
   "license": "MIT",
   "author": "lyadhgod (https://www.lyadhgod.com/)",
   "keywords": ["chess", "pgn", "music"],
   "homepage": "https://github.com/lyadhgod/pgn-music#readme",
   "repository": {    
-    "type": "git",    
+    "type": "git",
     "url": "git+https://github.com/lyadhgod/pgn-music.git"  
   },
   "bugs": {    
@@ -17,7 +17,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "npx jest",
-    "build": "tsc",
+    "build": "npx rmdir-cli ./dist && tsc",
     "parse-pgn": "npm run build && node dist/parse-pgn.js",
     "publish": "npm run build && npm publish"
   },
