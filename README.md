@@ -1,6 +1,6 @@
 # pgn-music
 
-A TypeScript npm library for reading chess PGN files, parsing and converting the destination squares of all moves into musical notes. The library provides utility functions to parse PGN files or strings and outputs the move destinations (as uppercase strings, representing musical notes) for each game, making it easy to analyze or transform chess games into musical sequences or for further applications.
+A TypeScript npm library for reading chess PGN, parsing and converting the destination squares of all moves into musical notes. The library provides utility functions to parse PGN strings and outputs the move destinations (as uppercase strings, representing musical notes) for each game, making it easy to analyze or transform chess games into musical sequences or for further applications.
 
 ## Features
 - Parse PGN strings
@@ -32,7 +32,7 @@ const pgn = `
 1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 *`;
 
 const notes = getMusicalNotesFromPgnString(pgn);
-console.log(notes);
+console.log(notes); // ['E4', 'E5', 'F3', 'C6', 'B5', 'A6']
 ```
 
 ### Advanced: Parse already-parsed PGN or single games
