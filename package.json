@@ -1,6 +1,6 @@
 {
   "name": "pgn-music",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Parse PGN and convert them to music",
   "license": "MIT",
   "author": "lyadhgod (https://www.lyadhgod.com/)",
