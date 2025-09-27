@@ -11,25 +11,33 @@ import { PgnMove } from '@mliebelt/pgn-types';
  * @returns The destination square as a musical note (e.g., 'E4', 'G1', 'C8'), or 'X' for unparseable moves.
  */
 function getNoteFromMove(move: PgnMove, moveIdx: number): string {
+  let note = 'X';
   if (move && move.notation && move.notation.col && move.notation.row) {
-    return (move.notation.col.toUpperCase() + move.notation.row);
+    note = (move.notation.col.toUpperCase() + move.notation.row);
   }
+
   if (move && typeof move.notation.notation === 'string' && /^O-O(-O)?([+#]{1,2})?$/.test(move.notation.notation)) {
     const isWhite = moveIdx % 2 === 0;
     if (/^O-O-O/.test(move.notation.notation)) {
-      return isWhite ? 'C1' : 'C8';
+      note = isWhite ? 'C1' : 'C8';
     } else {
-      return isWhite ? 'G1' : 'G8';
+      note = isWhite ? 'G1' : 'G8';
     }
   }
+
   if (move && typeof move.notation.notation === 'string') {
     const squareRegex = /^[a-h][1-8]$/i;
     const match = /([a-h][1-8])(?:=[QRBN])?(?:[+#]{1,2})?$/i.exec(move.notation.notation);
     if (match && squareRegex.test(match[1])) {
-      return match[1].toUpperCase();
+      note = match[1].toUpperCase();
     }
   }
-  return 'X';
+
+  if (!/^[H][1-8]$/.test(note)) {
+    note = note.replace('H', 'A');
+  }
+
+  return note;
 }
 
 /**
