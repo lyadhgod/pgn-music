@@ -47,14 +47,14 @@ import { getMusicalNotesFromPgn, getMusicalNotesFromGame, getNoteFromMove } from
 
 ## API
 
-### `getMusicalNotesFromPgnString(pgn: string): string[][]`
+### `getMusicalNotesFromPgnString(pgn: string, option?: Option): string[][]`
 Parses a PGN string and returns an array of arrays of musical notes (destination squares) for each game.
 
-### `getMusicalNotesFromPgn(parsedPgn: ParseTree[]): string[][]`
+### `getMusicalNotesFromPgn(parsedPgn: ParseTree[], option?: Option): string[][]`
 Converts an array of parsed PGN games to musical notes for each game.
 
-### `getMusicalNotesFromGame(game: ParseTree): string[]`
+### `getMusicalNotesFromGame(game: ParseTree, option?: Option): string[]`
 Converts all moves in a single parsed PGN game to musical notes.
 
-### `getNoteFromMove(move: PgnMove, moveIdx: number): string`
+### `getNoteFromMove(move: PgnMove, moveIdx: number, option?: Option): string`
 Converts a single PGN move to a musical note (destination square as uppercase string).
