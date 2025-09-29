@@ -155,5 +155,6 @@ export {
   getMusicalNotesFromPgn,
   getMusicalNotesFromPgnString,
   getMusicalNotesFromGame,
-  getNoteFromMove
+  getNoteFromMove,
+  Option,
 };

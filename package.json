@@ -4,7 +4,11 @@
   "description": "Parse PGN and convert them to music",
   "license": "MIT",
   "author": "lyadhgod (https://www.lyadhgod.com/)",
-  "keywords": ["chess", "pgn", "music"],
+  "keywords": [
+    "chess",
+    "pgn",
+    "music"
+  ],
   "homepage": "https://github.com/lyadhgod/pgn-music#readme",
   "repository": {
     "type": "git",
@@ -21,13 +25,9 @@
     "publish": "npm run build && npm publish"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.3",
-    "@rollup/plugin-node-resolve": "^16.0.1",
-    "@rollup/plugin-typescript": "^12.1.2",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.15.30",
     "jest": "^29.7.0",
-    "rollup": "^4.42.0",
     "ts-jest": "^29.3.4",
     "tslib": "^2.8.1",
     "typescript": "^5.8.3"
